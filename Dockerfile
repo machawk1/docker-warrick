@@ -19,4 +19,4 @@ RUN perl -MCPAN -e 'install Bundle::LWP'
 RUN perl -MCPAN -e 'install HTML::LinkExtractor'
 
 RUN git clone https://code.google.com/p/warrick/ /warrick
-CMD perl /warrick/warrick.pl -D /output ${URI}
+ENTRYPOINT ["perl", "/warrick/warrick.pl", "-D", "/output", ${URI}]
