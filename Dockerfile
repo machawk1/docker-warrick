@@ -16,5 +16,5 @@ RUN perl -MCPAN -e 'install Getopt::Long'
 RUN perl -MCPAN -e 'install Bundle::LWP'
 RUN perl -MCPAN -e 'install HTML::LinkExtractor'
 
-RUN git clone https://code.google.com/p/warrick/ warrick
-RUN cd warrick && perl warrick.pl -D /output http://matkelly.com #TODO: make this an env variables
+RUN git clone https://code.google.com/p/warrick/ /warrick
+CMD perl /warrick/warrick.pl -D /output http://matkelly.com #TODO: make this an env variables
