@@ -18,4 +18,4 @@ In the future, this step will be unnecessary once the image is posted to the [Do
 ## Running Docker-Warrick
 To run the image built, run:
 
-``docker run -it -v `pwd`:/output -e URI="http://matkelly.com" mkelly/warrick``
+``docker run -it -v `pwd`/output:/output mkelly/warrick "http://matkelly.com"``
